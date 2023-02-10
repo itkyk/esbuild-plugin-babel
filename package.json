@@ -1,5 +1,5 @@
 {
-  "name": "esbuild-plugin-babel",
+  "name": "@itkyk/esbuild-plugin-babel",
   "version": "0.0.1",
   "description": "",
   "main": "./bin/index.cjs.js",
