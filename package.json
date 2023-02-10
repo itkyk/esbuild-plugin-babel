@@ -1,6 +1,6 @@
 {
   "name": "@itkyk/esbuild-plugin-babel",
-  "version": "0.0.3-alpha.0",
+  "version": "0.0.3-alpha.1",
   "description": "",
   "main": "./bin/index.cjs.js",
   "module": "./bin/index.ems.js",
