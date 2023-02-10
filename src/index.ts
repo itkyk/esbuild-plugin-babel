@@ -11,7 +11,7 @@ const babelPlugin = (options:babelPluginOptions):Plugin => ({
   name: "esbuild-plugin-babel",
   setup(build) {
     const filter = options.filter || /.*/;
-    build.onLoad({filter, namespace: "esbuild-babel-plugin-ns"}, ({path}) => {
+    build.onLoad({filter}, ({path}) => {
       const code = fs.readFileSync(path, "utf-8");
       return new Promise((resolve, reject) => {
         const result = babel.transformSync(code, options.babel);
