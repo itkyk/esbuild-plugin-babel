@@ -1,11 +1,13 @@
 {
   "name": "@itkyk/esbuild-plugin-babel",
-  "version": "0.0.1",
+  "version": "0.0.3-0",
   "description": "",
   "main": "./bin/index.cjs.js",
   "module": "./bin/index.ems.js",
   "types": "./bin/index.d.ts",
-  "files": ["/bin"],
+  "files": [
+    "/bin"
+  ],
   "scripts": {
     "build": "ts-node ./builder/index.ts",
     "postbuild": "tsc --declaration --emitDeclarationOnly --declarationDir './bin'"
@@ -14,7 +16,12 @@
     "type": "git",
     "url": "git+https://github.com/itkyk/esbuild-plugin-babel.git"
   },
-  "keywords": ["esbuild","babel","esbuild plugin","typescript"],
+  "keywords": [
+    "esbuild",
+    "babel",
+    "esbuild plugin",
+    "typescript"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
