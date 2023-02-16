@@ -9,7 +9,7 @@
     "/bin"
   ],
   "scripts": {
-    "build": "ts-node ./builder/index.ts",
+    "build": "node ./builder/index.js",
     "postbuild": "tsc --declaration --emitDeclarationOnly --declarationDir './bin'"
   },
   "repository": {
@@ -35,7 +35,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@types/babel__core": "^7.20.0",
-    "@babel/core": "^7.20.12"
+    "@babel/core": "^7.20.12",
+    "@types/babel__core": "^7.20.0"
   }
 }

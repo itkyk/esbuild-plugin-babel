@@ -1,4 +1,5 @@
-import * as esBuild from "esbuild";
+const esBuild = require("esbuild");
+const {dependencies} = require("../package.json");
 
 const init = async() => {
   await esBuild.build({
@@ -6,14 +7,18 @@ const init = async() => {
     platform: "node",
     format: "esm",
     outfile: "./bin/index.ems.js",
-    bundle: true
+    bundle: true,
+    external: Object.keys(dependencies),
+    target: "node12",
   })
   await esBuild.build({
     entryPoints: ["./src/index.ts"],
     platform: "node",
     format: "cjs",
     outfile: "./bin/index.cjs.js",
-    bundle: true
+    bundle: true,
+    target: "node12",
+    external: Object.keys(dependencies)
   })
 }
 

@@ -14,7 +14,10 @@ const babelPlugin = (options:babelPluginOptions):Plugin => ({
     build.onLoad({filter}, ({path}) => {
       const code = fs.readFileSync(path, "utf-8");
       return new Promise((resolve, reject) => {
-        const result = babel.transformSync(code, options.babel);
+        const result = babel.transformSync(code, {
+          filename: options.babel.filename || path,
+          ...options.babel
+        });
         if (result) {
           resolve({contents: result.code!});
         } else {

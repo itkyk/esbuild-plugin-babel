@@ -45,3 +45,6 @@ await esbuild.build({
 ## Dependencies
 - @babel/core: ^7.20.12
 
+## Change Log
+- version 0.0.3 (2023/02/16)
+  - Fixed `babel.transformSync` filename option to default to the path of the file loaded by esBuild.
